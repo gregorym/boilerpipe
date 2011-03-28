@@ -17,7 +17,7 @@ module BoilerPipe
   
   def self.extract(extract_url, opts = {})
     @output    = opts[:output].present?     ? opts[:output] : OUTPUT_FORMATS.first
-    @extractor = opts[:extractor].present?  ? opts[:output] : EXTRACTORS.first 
+    @extractor = opts[:extractor].present?  ? opts[:extractor] : EXTRACTORS.first 
     @api       = opts[:api].present?        ? opts[:api]    : DEFAULT_API_URL
     
     url = [@api, "?url=#{extract_url}", "&extractor=#{@extractor}","&output=#{@output}"].join
