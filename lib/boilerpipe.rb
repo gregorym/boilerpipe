@@ -10,15 +10,15 @@ class Object
   end
 end
 
-module BoilerPipe
+module Boilerpipe
   DEFAULT_API_URL = 'http://boilerpipe-web.appspot.com/extract'
   EXTRACTORS = [ :ArticleExtractor, :DefaultExtractor, :LargestContentExtractor, :KeepEverythingExtractor, :CanolaExtractor ]
   OUTPUT_FORMATS =  [ :html, :htmlFragment, :text, :json, :debug ]
   
   def self.extract(extract_url, opts = {})
-    @output    = opts[:output].present?     ? opts[:output] : OUTPUT_FORMATS.first
-    @extractor = opts[:extractor].present?  ? opts[:extractor] : EXTRACTORS.first 
-    @api       = opts[:api].present?        ? opts[:api]    : DEFAULT_API_URL
+    @output    = opts[:output].present?     ? opts[:output]     : OUTPUT_FORMATS.first
+    @extractor = opts[:extractor].present?  ? opts[:extractor]  : EXTRACTORS.first 
+    @api       = opts[:api].present?        ? opts[:api]        : DEFAULT_API_URL
     
     url = [@api, "?url=#{extract_url}", "&extractor=#{@extractor}","&output=#{@output}"].join
     open(url).read
