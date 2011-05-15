@@ -11,6 +11,8 @@ class Object
 end
 
 module Boilerpipe
+  VERSION = "0.0.4"  
+
   BP_DEFAULT_API_URL = 'http://boilerpipe-web.appspot.com/extract'
   BP_EXTRACTORS = [ :ArticleExtractor, :DefaultExtractor, :LargestContentExtractor, :KeepEverythingExtractor, :CanolaExtractor ]
   BP_OUTPUT_FORMATS =  [ :html, :htmlFragment, :text, :json, :debug ]
