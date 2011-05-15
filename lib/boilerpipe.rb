@@ -21,6 +21,10 @@ module Boilerpipe
     @api       = opts[:api].present?        ? opts[:api]        : BP_DEFAULT_API_URL
     
     url = [@api, "?url=#{extract_url}", "&extractor=#{@extractor}","&output=#{@output}"].join
-    open(url).read
+    begin
+      open(url).read 
+    rescue Exception => e 
+      Hash[:error => e.message]
+    end
   end
 end
