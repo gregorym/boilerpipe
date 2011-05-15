@@ -1,4 +1,4 @@
-This gem is a ruby wrapper for the Boilerpipe API.
+A ruby wrapper for the Boilerpipe API.
 Boilerpipe definition:
 
 bq. The boilerpipe library provides algorithms to detect and remove the surplus "clutter" (boilerplate, templates) around the main textual content of a web page.

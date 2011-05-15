@@ -1,11 +1,11 @@
 Gem::Specification.new do |s|
   s.name = "boilerpipe"
-  s.version = "0.04"
+  s.version = "0.0.4"
   s.date = "2010-05-15"
-  s.summary = "Ruby wrapper of the Boilerpipe API"
+  s.summary = "Ruby wrapper for the Boilerpipe API"
   s.email = "g.marcilhacy@gmail.com"
   s.homepage = "https://github.com/gregorym/boilerpipe"
-  s.description = "Ruby wrapper of the Boilerpipe API"
+  s.description = "Ruby wrapper for the Boilerpipe API"
   s.has_rdoc = false
   s.authors = ["Grégory Marcilhacy"]
 
