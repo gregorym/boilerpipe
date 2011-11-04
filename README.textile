@@ -17,5 +17,7 @@ None of these options are mandatory. To find out more about these options checko
 
 h1. Example
 
->> require "boilerpipe"
->> Boilerpipe.extract("http://techcrunch.com/2011/05/12/karma-is-a-bitch/", {:output => :json})
+<pre>
+require "boilerpipe"
+Boilerpipe.extract("http://techcrunch.com/2011/05/12/karma-is-a-bitch/", {:output => :json})
+</pre>
